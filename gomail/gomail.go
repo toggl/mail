@@ -38,8 +38,8 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/alexcesaro/mail/mailer"
-	"github.com/alexcesaro/mail/quotedprintable"
+	"github.com/toggl/mail/mailer"
+	"github.com/toggl/mail/quotedprintable"
 )
 
 const (

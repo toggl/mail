@@ -76,7 +76,7 @@ func (m *Mailer) Send(msg *mail.Message) error {
 	}
 
 	mail := append(h, body...)
-	if err := sendMail(m.addr, m.auth, from, recipients, mail); err != nil {
+	if err := SendMail(m.addr, m.auth, from, recipients, mail); err != nil {
 		return err
 	}
 
@@ -84,7 +84,7 @@ func (m *Mailer) Send(msg *mail.Message) error {
 		for _, to := range bcc {
 			h = flattenHeader(msg, to)
 			mail = append(h, body...)
-			if err := sendMail(m.addr, m.auth, from, []string{to}, mail); err != nil {
+			if err := SendMail(m.addr, m.auth, from, []string{to}, mail); err != nil {
 				return err
 			}
 		}
@@ -167,4 +167,4 @@ func parseAddress(field string) (string, error) {
 }
 
 // Stubbed out for testing.
-var sendMail = smtp.SendMail
+var SendMail = smtp.SendMail
