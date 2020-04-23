@@ -1,3 +1,12 @@
+DEPRECATED
+==========
+
+**This fork was created as a workaround for the library limitations at the time and should not be used anymore.**
+
+**The current community-maintaned fork should be used instead: https://github.com/go-mail/mail**
+
+___
+
 This repository contains mail packages for Go:
  - [gomail](#gomail) is the main package of this repository, it provides a
    simple interface to easily write and send emails.
